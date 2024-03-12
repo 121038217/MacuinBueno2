@@ -30,8 +30,8 @@
         </div>
       </div>
 
-      <div class="hidden lg:flex lg:gap-x-12">
-      <div class="relative">
+      
+  <div class="relative">
     <button id="menuButton" class="flex-col flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-stone-100 hover:bg-stone-300 transition-colors duration-300 rounded-lg" aria-expanded="false">
         <div>¡Hola!</div>
         <div>Nombre del cliente</div>
@@ -47,7 +47,7 @@
             <a href="cliente_Editarperfil" class="text-sm text-gray-700">Editar Perfil</a>
         </li>
     </ul>
-</div>
+    </div>
   </nav>
   
   <div class="bg-blue-600 text-white px-4 py-2 text-center">
@@ -89,17 +89,7 @@
           <td class="px-4 py-2">Estatus 1</td>
         </tr>
         <tr>
-          <td class="px-4 py-2">Autor 2</td>
-          <td class="px-4 py-2">Departamento 2</td>
-          <td class="px-4 py-2">2024-03-13</td>
-          <td class="px-4 py-2">
-          <span class="inline-flex items-center">
-               <svg class="h-4 w-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.733.764 1.733 1.733v6.805c0 .969-.764 1.733-1.733 1.733h-3.462a1 1 0 00-.95-.69l-1.07-3.292a1 1 0 00-1.902 0l-1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.733.764 1.733 1.733v6.805c0 .969-.764 1.733-1.733 1.733h-3.462a1 1 0 00-.95-.69l-1.07-3.292a1 1 0 00-1.902 0l-1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.733.764 1.733 1.733v1.732c0 .969-.764 1.733-1.733 1.733H2.764C1.797 20 1 19.236 1 18.267V8.267C1 7.298 1.797 6.531 2.764 6.531h3.462a1 1 0 00.95-.69l1.07-3.292C8.147 2.927 8.748 2 9.049 2.927z"/></svg>
-             </span>
-              <span class="ml-2">Pendiente</span>
-          </td>
-          <td class="px-4 py-2">Detalle 2</td>
-          <td class="px-4 py-2">Estatus 2</td>
+          
         </tr>
       </tbody>
     </table>
@@ -137,7 +127,14 @@
     </a>
 </div> 
 
+<script>
+    const menuButton = document.getElementById('menuButton');
+    const menu = document.getElementById('menu');
 
+    menuButton.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
   
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </body>

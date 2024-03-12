@@ -1,4 +1,4 @@
-cliente<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,7 @@ cliente<!DOCTYPE html>
   <title>cliente Inicio </title>
   <link rel="stylesheet" href="/build/app.css">
   <style>
-   
+
 
   </style>
 </head>
@@ -16,7 +16,7 @@ cliente<!DOCTYPE html>
   <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
     <div class="flex lg:flex-1">
         <img src="ruta/a/tu/imagen.svg" alt="Macuin Dashboards" class="h-6 w-6 mr-2">
-        <a href="cliente_inicio" class="-m-1.5 p-1.5 font-bold text-xl"> Macuin Dashboards
+        <a href="#" class="-m-1.5 p-1.5 font-bold text-xl"> Macuin Dashboards
         </a>
     </div>
 
@@ -30,22 +30,23 @@ cliente<!DOCTYPE html>
         </div>
       </div>
 
-      <div class="hidden lg:flex lg:gap-x-12">
-        <div class="relative">
-          <button type="button" class="flex-col flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false">
-            <div>Cliente</div>
-            <div> Nombre del cliente</div>
-            <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-            </svg>
-          </button>
-          <ul class="absolute hidden top-0 left-0 w-full py-1 bg-white shadow-md rounded-md z-10 origin-top-right focus:outline-none">
-            <li class="px-4 py-2 hover:bg-gray-100 rounded-md">
-              <a href="#" class="text-sm text-gray-700">Editar</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <div class="relative">
+    <button id="menuButton" class="flex-col flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-stone-100 hover:bg-stone-300 transition-colors duration-300 rounded-lg" aria-expanded="false">
+        <div>¡Hola!</div>
+        <div>Nombre del cliente</div>
+        <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+    </button>
+    <ul id="menu" class="absolute hidden top-0 left-0 w-36 py-1 bg-white shadow-md rounded-md z-10 origin-top-right focus:outline-none">
+        <li class="px-4 py-2 hover:bg-gray-100 rounded-md">
+            <a href="cliente_perfil" class="text-sm text-gray-700">Perfil</a>
+        </li>
+        <li class="px-4 py-2 hover:bg-gray-100 rounded-md">
+            <a href="cliente_Editarperfil" class="text-sm text-gray-700">Editar Perfil</a>
+        </li>
+    </ul>
+</div>
   </nav>
   
   <div class="bg-blue-600 text-white px-4 py-2 text-center">
@@ -55,7 +56,7 @@ cliente<!DOCTYPE html>
 </header> <!--Final del encabezado-->
 
 <!--Botones-->
-<div class="flex flex-col justify-start items-start py-30 px-10 mt-48"> 
+<div class="flex flex-col justify-start items-start py-30 px-10 mt-48">
     <a href="cliente_solicitarticker" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300 ">
       Solicitar ticket
     </a>
@@ -64,21 +65,71 @@ cliente<!DOCTYPE html>
     </a>
 </div>
 {{-- mini tabla --}}
-<div class="flex flex-col justify-center items-end">
-  <div class="max-w-7xl mx-auto sm:px-9 lg:px-11">
-    <table class="table-auto w-full text-sm text-left" style="width: 50px;" >
-      <thead class="bg-gray-50 ">
-        <tr>
-          <th class="px-4 py-2">Departamento</th>
-          <th class="px-4 py-2">Fecha</th>
-          <th class="px-4 py-2">Estatus</th>
-        </tr>
-      </thead>
-      <tbody class="bg-white">
-        <tr>
-          <td class="px-4 py-2 border-b">Sistemas</td>
-          <td class="px-4 py-2 border-b">12/03/2024</td>
-          <td class="px-4 py-2 border-b">Abierto</td>
+<div class="flex justify-center">
+    <table class="table-auto w-full text-sm text-left" style="width: 50px;">
+        <thead class="bg-gray-50">
+            <tr>
+                <th class="px-4 py-2">Departamento</th>
+                <th class="px-4 py-2">Fecha</th>
+                <th class="px-4 py-2">Estatus</th>
+            </tr>
+        </thead>
+        <tbody class="bg-white">
+            <tr>
+                <td class="px-4 py-2 border-b">Sistemas</td>
+                <td class="px-4 py-2 border-b">12/03/2024</td>
+                <td class="px-4 py-2 border-b text-center">
+                    <div class="relative inline-block text-left">
+                        <select class="block appearance-none w-full bg-white border border-gray-300 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                            <option>Completado</option>
+                            <option>Asignado</option>
+                            <option>En proceso</option>
+                            <option>Nunca solicitado</option>
+                            <option>Cancelado</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 6.707a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+              </button>
+              <ul
+                class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+                aria-labelledby="dropdownMenuButton1"
+                data-twe-dropdown-menu-ref>
+                <li>
+                  <a
+                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="#"
+                    data-twe-dropdown-item-ref
+                    >Action</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="#"
+                    data-twe-dropdown-item-ref
+                    >Another action</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="#"
+                    data-twe-dropdown-item-ref
+                    >Something else here</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </td>
+
         </tr>
         </tbody>
     </table>
@@ -98,6 +149,8 @@ cliente<!DOCTYPE html>
           <th class="px-4 py-2">Calificación</th>
           <th class="px-4 py-2">Detalle</th>
           <th class="px-4 py-2">Estatus</th>
+          <th class="px-4 py-2"></th>
+          <th class="px-4 py-2"></th>
         </tr>
       </thead>
       <tbody class="bg-white">
@@ -114,15 +167,23 @@ cliente<!DOCTYPE html>
           </td>
           <td class="px-4 py-2 border-b">Mi computadora no enciende</td>
           <td class="px-4 py-2 border-b">Pendiente</td>
+          <th class="px-4 py-2"><button class="bg-green-400  text-white font-bold py-2 px-4 rounded mt-4">Editar</button></th>
+          <th class="px-4 py-2"><button class="bg-red-500  text-white font-bold py-2 px-4 rounded mt-4">Eliminar</button></th>
         </tr>
         </tbody>
     </table>
-    <button class="bg-green-400  text-white font-bold py-2 px-4 rounded mt-4">Editar</button>
-          <button class="bg-red-500  text-white font-bold py-2 px-4 rounded mt-4">Eliminar</button>
     <div class="flex justify-center">Macuin DashBoards. Todos los derechos Reservados</div>
-  </div>  
+  </div>
 </div>
-  
+<script>
+    const menuButton = document.getElementById('menuButton');
+    const menu = document.getElementById('menu');
+
+    menuButton.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
+  
 </body>
 </html>

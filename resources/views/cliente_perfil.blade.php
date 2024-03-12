@@ -29,23 +29,23 @@
           </a>
         </div>
       </div>
-
-      <div class="hidden lg:flex lg:gap-x-12">
-        <div class="relative">
-        <button type="button" class="flex-col flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-stone-100 hover:bg-stone-300 transition-colors duration-300 rounded-lg " aria-expanded="false">
-            <div>Cliente</div>
-            <div> Nombre del cliente</div>
-            <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-            </svg>
-          </button>
-          <ul class="absolute hidden top-0 left-0 w-full py-1 bg-white shadow-md rounded-md z-10 origin-top-right focus:outline-none">
-            <li class="px-4 py-2 hover:bg-gray-100 rounded-md">
-              <a href="#" class="text-sm text-gray-700">Editar</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <div class="relative">
+    <button id="menuButton" class="flex-col flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-stone-100 hover:bg-stone-300 transition-colors duration-300 rounded-lg" aria-expanded="false">
+        <div>¡Hola!</div>
+        <div>Nombre del cliente</div>
+        <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+    </button>
+    <ul id="menu" class="absolute hidden top-0 left-0 w-36 py-1 bg-white shadow-md rounded-md z-10 origin-top-right focus:outline-none">
+        <li class="px-4 py-2 hover:bg-gray-100 rounded-md">
+            <a href="cliente_perfil" class="text-sm text-gray-700">Perfil</a>
+        </li>
+        <li class="px-4 py-2 hover:bg-gray-100 rounded-md">
+            <a href="cliente_Editarperfil" class="text-sm text-gray-700">Editar Perfil</a>
+        </li>
+    </ul>
+</div>
   </nav>
   
   <div class="bg-blue-600 text-white px-4 py-2 text-center">
@@ -71,7 +71,14 @@
   
 
 
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const menu = document.getElementById('menu');
 
+    menuButton.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
 
 
 
