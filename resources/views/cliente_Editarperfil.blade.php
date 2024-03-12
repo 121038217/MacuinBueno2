@@ -7,12 +7,7 @@
   <title>cliente Inicio </title>
   <link rel="stylesheet" href="/build/app.css">
   <style>
-    /* Styling for the ticket bar */
-    header nav .flex.lg:flex-1 + div {
-      border-t-2 border-solid border-blue-600 /* Adjust blue shade as needed */
-      padding-top: 1rem;
-    }
-
+  
   </style>
 </head>
 <body class="bg-gray-300">
@@ -36,7 +31,7 @@
 
       <div class="hidden lg:flex lg:gap-x-12">
         <div class="relative">
-          <button type="button" class="flex-col flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false">
+        <button type="button" class="flex-col flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-stone-100 hover:bg-stone-300 transition-colors duration-300 rounded-lg " aria-expanded="false">
             <div>Cliente</div>
             <div> Nombre del cliente</div>
             <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -82,8 +77,8 @@
       <input type="password" name="password" id="password" autocomplete="current-password" class="block w-full rounded-md border-gray-300 shadow-sm px-3 py-2 text-gray-700 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
   
       <div class="flex items-center justify-end mt-4 gap-x-2">
-        <button type="button" class="text-sm font-semibold leading-6 text-gray-500 hover:text-gray-700">Cancelar</button>
-        <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus:visible:outline focus:visible:outline-2 focus:visible:outline-offset-2 focus:visible:outline-indigo-600">Editar</button>
+        <button type="button" class="text-sm font-semibold leading-6 text-gray-500 hover:text-gray-700 transition-colors duration-300">Cancelar</button>
+        <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition-colors duration-300 focus:visible:outline focus:visible:outline-2 focus:visible:outline-offset-2 focus:visible:outline-indigo-600">Editar</button>
       </div>
     </div>
 </div>  

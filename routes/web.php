@@ -28,3 +28,6 @@ Route::get('/cliente_Editarperfil', function () {
 Route::get('/cliente_perfil', function () {
     return view('cliente_perfil');
 });
+Route::get('/cliente_solicitarticker', function () {
+    return view('cliente_solicitarticker');
+});

@@ -7,12 +7,7 @@
   <title>cliente Inicio </title>
   <link rel="stylesheet" href="/build/app.css">
   <style>
-    /* Styling for the ticket bar */
-    header nav .flex.lg:flex-1 + div {
-      border-t-2 border-solid border-blue-600 /* Adjust blue shade as needed */
-      padding-top: 1rem;
-    }
-
+  
   </style>
 </head>
 <body class="bg-gray-300">
@@ -26,7 +21,7 @@
 
     <div class="flex flex-col justify-start items-start py-30 px-30 mt-4">
         <div class="flex justify-end">
-          <a href="#" class="flex items-center p-2 py-30 px-10 text-gray-700">
+          <a href="#" class="flex items-center p-2 py-30 px-10 text-gray-700 ">
             <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
@@ -34,9 +29,9 @@
         </div>
       </div>
 
-      <div class="hidden lg:flex lg:gap-x-12">
+      <div class="hidden lg:flex lg:gap-x-12 ">
         <div class="relative">
-          <button type="button" class="flex-col flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false">
+        <button type="button" class="flex-col flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-stone-100 hover:bg-stone-300 transition-colors duration-300 rounded-lg " aria-expanded="false">
             <div>Cliente</div>
             <div> Nombre del cliente</div>
             <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -60,16 +55,17 @@
 
  <!--Botones-->
  <div class="flex flex-col justify-start items-start py-30 px-10 mt-48"> 
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300 ">
     Solicitar ticket
   </button>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+  
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 transition-colors duration-300">
       Consultar ticket
     </button>
 </div> 
 
  <!--Tabla-->
- <div class="flex flex-col justify-center items-end">
+ <div class="flex flex-col justify-center items-end ">
   <div class="max-w-7xl mx-auto sm:px-9 lg:px-11">
     <table class="table-auto w-full text-sm text-left" style="width: 100px;" >
       <thead class="bg-gray-50 ">

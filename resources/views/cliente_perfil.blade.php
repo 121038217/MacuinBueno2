@@ -36,7 +36,7 @@
 
       <div class="hidden lg:flex lg:gap-x-12">
         <div class="relative">
-          <button type="button" class="flex-col flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false">
+        <button type="button" class="flex-col flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-stone-100 hover:bg-stone-300 transition-colors duration-300 rounded-lg " aria-expanded="false">
             <div>Cliente</div>
             <div> Nombre del cliente</div>
             <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
