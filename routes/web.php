@@ -34,3 +34,6 @@ Route::get('/cliente_solicitarticker', function () {
 Route::get('/cliente_consultarticket', function() {
     return view('cliente_consultarticket');
 });
+Route::get('/index', function() {
+    return view('index');
+});
