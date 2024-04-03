@@ -8,7 +8,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>cliente Solicitar ticket </title>
+    <title>auxiliar_encabezado </title>
     <link rel="stylesheet" href="/build/app.css">
     <style>
     
@@ -19,7 +19,7 @@
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex items-center lg:flex-1">
         <img src="/img/Macuin.jpg" alt="Macuin Dashboards" class="h-15 w-12 mr-4">
-          <a href="cliente_inicio" class="-m-1.5 p-1.5 font-bold text-xl"> Macuin Dashboards
+          <a href="auxiliar_inicio" class="-m-1.5 p-1.5 font-bold text-xl"> Macuin Dashboards
           </a>
       </div>
   
@@ -35,18 +35,18 @@
         
     <div class="relative">
       <button id="menuButton" class="flex-col flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-stone-100 hover:bg-stone-300 transition-colors duration-300 rounded-lg" aria-expanded="false">
-          <div>¡Hola!</div>
-          <div>Nombre del cliente</div>
+          <div>Auxiliar Soporte</div>
+          <div>Alan Yoltic Guzman</div>
           <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
           </svg>
       </button>
       <ul id="menu" class="absolute hidden top-0 left-0 w-36 py-1 bg-white shadow-md rounded-md z-10 origin-top-right focus:outline-none">
           <li class="px-4 py-2 hover:bg-gray-100 rounded-md">
-              <a href="cliente_perfil" class="text-sm text-gray-700">Perfil</a>
+              <a href="auxiliar_perfil" class="text-sm text-gray-700">Perfil</a>
           </li>
           <li class="px-4 py-2 hover:bg-gray-100 rounded-md">
-              <a href="cliente_Editarperfil" class="text-sm text-gray-700">Editar Perfil</a>
+              <a href="auxiliar_editarperfil" class="text-sm text-gray-700">Editar Perfil</a>
           </li>
           <li class="px-4 py-2 hover:bg-gray-100 rounded-md">
             <a href="login" class="text-sm text-gray-700">Cerrar sesion</a>

@@ -50,3 +50,22 @@ Route::get('/recuperacion_contraseña', function() {
 Route::get('/confirmacion', function() {
     return view('login.confirmacion');
 });
+//////////////////// AUXILIAR  /////////////////
+Route::get('/auxiliar_inicio', function() {
+    return view('auxiliar.auxiliar_inicio');
+});
+Route::get('/auxiliar_perfil', function() {
+    return view('auxiliar.auxiliar_perfil');
+});
+Route::get('/auxiliar_editarperfil', function() {
+    return view('auxiliar.auxiliar_editarperfil');
+});
+Route::get('/auxiliar_controlticket', function() {
+    return view('auxiliar.auxiliar_controlticket');
+});
+Route::get('/auxiliar_buscarticket', function() {
+    return view('auxiliar.auxiliar_buscarticket');
+});
+Route::get('/auxiliar_reportes', function() {
+    return view('auxiliar.auxiliar_reportes');
+});

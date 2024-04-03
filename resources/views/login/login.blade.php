@@ -26,13 +26,13 @@
         </div>
     </form>
 
-    <div class="flex justify-center mt-4 mb-5"> <!-- Centramos horizontalmente el enlace -->
+    <div class="flex justify-center mt-4 mb-5"> 
         <a href="recuperacion_contraseña" class="text-red-500 font-semibold hover:underline">Forgot Password?</a>
     </div>
             
     <!--Botones-->
-    <div class="flex justify-center mt-4"> <!-- Centramos horizontalmente los botones -->
-        <div class="mb-5 mr-3"> <!-- Agregamos margen derecho al primer botón -->
+    <div class="flex justify-center mt-4"> 
+        <div class="mb-5 mr-3"> 
             <a href="login" class="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300 ">
                 Cancelar 
             </a>
