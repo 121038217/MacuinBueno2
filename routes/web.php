@@ -41,9 +41,33 @@ Route::get('/index', function() {
 Route::get('/login', function() {
     return view('login.login');
 });
-Route::get('/login', function() {
-    return view('login.login');
-});
+
+Route::post('/loginss', function() {
+    $email = request('email');
+    $password = request('password');
+
+    // Verificar correo y contraseña
+    switch ($email) {
+        case 'usuario1@example.com':
+            if ($password === 'contraseña1') {
+                session(['username' => 'Usuario 1']);
+                return view('cliente.cliente_inicio');
+            } else {
+                return view('login.login')->with('error', 'Contraseña incorrecta');
+            }
+        case 'usuario2@example.com':
+            if ($password === 'contraseña2') {
+                session(['username' => 'Usuario 2']);
+                return view('auxiliar.auxiliar_inicio');
+            } else {
+                return view('login.login')->with('error', 'Contraseña incorrecta');
+            }
+        default:
+            return view('login.login')->with('error', 'Correo no reconocido');
+    }
+})->name('loginss.process');
+
+
 Route::get('/recuperacion_contraseña', function() {
     return view('login.recuperacion_contraseña');
 });
