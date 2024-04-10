@@ -19,13 +19,11 @@
             </svg>
         </div>
         <div class="w-72 mt-16">
-            <p>Alan Yoltic Guzman</p>
-            <p>1999-11-21</p>
-            <p>Auxiliar Soporte</p>
+             <p>{{ session('username') }}</p>
+             <p>{{ session('fecha') }}</p>
+             <p>{{ session('depa') }}</p>
+             <p>{{ session('correo') }}</p>
 
-            <div class=" mt-20">
-            <p>Alan_Yol_Guz@gmail.com</p>  
-            </div> 
 
         </div>
     </div>

@@ -19,10 +19,10 @@
       </svg>
     </div>
     <div class="w-72 mt-16">
-      <p>John Doe</p>
-      <p>1985-06-21</p>
-      <p>Ventas</p>
-      <p>johndoe@example.com</p>
+      <p>{{ session('username') }}</p>
+      <p>{{ session('fecha') }}</p>
+      <p>{{ session('depa') }}</p>
+      <p>{{ session('correo') }}</p>
     </div>
 </div>
 

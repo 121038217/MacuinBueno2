@@ -6,57 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>cliente Inicio </title>
   <link rel="stylesheet" href="/build/app.css">
-  <style>
-
-
-  </style>
+  @extends('layouts.plantilla')
+  @section('contenido')
 </head>
-<body class="bg-gray-300">
-<header class="bg-white">
-  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-    <div class="flex lg:flex-1">
-        <img src="ruta/a/tu/imagen.svg" alt="Macuin Dashboards" class="h-6 w-6 mr-2">
-        <a href="#" class="-m-1.5 p-1.5 font-bold text-xl"> Macuin Dashboards
-        </a>
-    </div>
-
-    <div class="flex flex-col justify-start items-start py-30 px-30 mt-4">
-        <div class="flex justify-end">
-          <a href="#" class="flex items-center p-2 py-30 px-10 text-gray-700">
-            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="relative">
-    <button id="menuButton" class="flex-col flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-stone-100 hover:bg-stone-300 transition-colors duration-300 rounded-lg" aria-expanded="false">
-        <div>¡Hola!</div>
-        <div>Nombre del cliente</div>
-        <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-        </svg>
-    </button>
-    <ul id="menu" class="absolute hidden top-0 left-0 w-36 py-1 bg-white shadow-md rounded-md z-10 origin-top-right focus:outline-none">
-        <li class="px-4 py-2 hover:bg-gray-100 rounded-md">
-            <a href="cliente_perfil" class="text-sm text-gray-700">Perfil</a>
-        </li>
-        <li class="px-4 py-2 hover:bg-gray-100 rounded-md">
-            <a href="cliente_Editarperfil" class="text-sm text-gray-700">Editar Perfil</a>
-        </li>
-    </ul>
-</div>
-  </nav>
-  
-  <div class="bg-blue-600 text-white px-4 py-2 text-center">
-    Tickets
-  </div>
-
-</header> <!--Final del encabezado-->
+<body>
 
 <!--Botones-->
-<div class="flex flex-col justify-start items-start py-30 px-10 mt-48">
+<div class="flex justify-center items-center mt-8 space-x-10  mb-5">
     <a href="cliente_solicitarticker" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300 ">
       Solicitar ticket
     </a>
@@ -167,8 +123,8 @@
           </td>
           <td class="px-4 py-2 border-b">Mi computadora no enciende</td>
           <td class="px-4 py-2 border-b">Pendiente</td>
-          <th class="px-4 py-2"><button class="bg-green-400  text-white font-bold py-2 px-4 rounded mt-4">Editar</button></th>
-          <th class="px-4 py-2"><button class="bg-red-500  text-white font-bold py-2 px-4 rounded mt-4">Eliminar</button></th>
+          <th class="px-4 py-2"><button onclick="editar()" class="bg-green-400  text-white font-bold py-2 px-4 rounded mt-4">Editar</button></th>
+          <th class="px-4 py-2"><button onclick="Eliminar()" class="bg-red-500  text-white font-bold py-2 px-4 rounded mt-4">Eliminar</button></th>
         </tr>
         </tbody>
     </table>
@@ -183,7 +139,47 @@
         menu.classList.toggle('hidden');
     });
 </script>
+
+
+
+<script>
+  function Eliminar() {
+    const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: "btn btn-success",
+    cancelButton: "btn btn-danger"
+  },
+  buttonsStyling: true
+});
+swalWithBootstrapButtons.fire({
+  title: "¿Estas seguro?",
+  icon: "warning",
+  showCancelButton: true,
+  cancelButtonText: "Cancelar",
+  confirmButtonText: "Eliminar",
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+    swalWithBootstrapButtons.fire({
+      title: "Borrado!",
+      text: "El ticket se borro",
+      icon: "success"
+    });
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire({
+      title: "Cancelado",
+      text: "El ticket no se borro",
+      icon: "error"
+    });
+  }
+});
+  }
+</script>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
+  @endsection
   
 </body>
 </html>

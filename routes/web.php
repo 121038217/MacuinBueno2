@@ -50,14 +50,20 @@ Route::post('/loginss', function() {
     switch ($email) {
         case 'usuario1@example.com':
             if ($password === 'contraseña1') {
-                session(['username' => 'Usuario 1']);
+                session(['username' => 'Alan yoltic',
+                         'depa'     => 'Auxiliar',  
+                         'fecha'    => '19/11/1999',
+                         'correo'   =>  'usuario1@example.com']);
                 return view('cliente.cliente_inicio');
             } else {
                 return view('login.login')->with('error', 'Contraseña incorrecta');
             }
         case 'usuario2@example.com':
             if ($password === 'contraseña2') {
-                session(['username' => 'Usuario 2']);
+                session(['username' => 'Lilian leticia',
+                         'depa'     => 'Cliente',  
+                         'fecha'    => '04/11/1996',
+                         'correo'   => 'usuario2@example.com'   ]);
                 return view('auxiliar.auxiliar_inicio');
             } else {
                 return view('login.login')->with('error', 'Contraseña incorrecta');
