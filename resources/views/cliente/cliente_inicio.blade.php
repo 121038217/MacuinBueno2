@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>cliente Inicio </title>
+  <title>Cliente Inicio</title>
   <link rel="stylesheet" href="/build/app.css">
   @extends('layouts.plantilla')
   @section('contenido')
@@ -14,20 +14,17 @@
 <body class="bg-gray-300">
 
  <!--Botones-->
- <div class="flex flex-col justify-start items-start py-30 px-10 mt-48">
-    <div class="mb-5"> 
-      <a href="cliente_solicitarticker" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300" onclick="mostrarTabla()">
-        Solicitar ticket
-      </a>
-    </div>
-    <div class="mt-5">
-      <a href="cliente_consultarticket" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300 ">
-        Consultar ticket
-      </a>
-    </div>
-</div> 
+ <div class="flex justify-center items-center mt-8 space-x-10  mb-5"> <!-- Utilizamos 'space-x-8' para separar simétricamente los botones -->
+    <a href="cliente_solicitarticker" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300" onclick="mostrarTabla()">
+      Solicitar ticket
+    </a>
+    <a href="cliente_consultarticket" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300 ">
+      Consultar ticket
+    </a>
+ </div>
+
  <!--Tabla-->
- <div class="flex flex-col justify-center items-end ">
+ <div class="flex justify-center items-center">
   <div class="max-w-7xl mx-auto sm:px-9 lg:px-11">
     <table class="table-auto w-full text-sm text-left" style="width: 100px;" >
       <thead class="bg-gray-50 ">
@@ -56,7 +53,7 @@
           <td class="px-4 py-2 border-b">Mi computadora no enciende</td>
           <td class="px-4 py-2 border-b">Asignado</td>
         </tr>
-        </tbody>
+      </tbody>
     </table>
   </div>  
 </div>
