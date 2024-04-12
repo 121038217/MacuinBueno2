@@ -51,7 +51,7 @@ Route::post('/loginss', function() {
         case 'usuario1@example.com':
             if ($password === 'contraseña1') {
                 session(['username' => 'Alan yoltic',
-                         'depa'     => 'Auxiliar',  
+                         'depa'     => 'Auxiliar',
                          'fecha'    => '19/11/1999',
                          'correo'   =>  'usuario1@example.com']);
                 return view('cliente.cliente_inicio');
@@ -61,7 +61,7 @@ Route::post('/loginss', function() {
         case 'usuario2@example.com':
             if ($password === 'contraseña2') {
                 session(['username' => 'Lilian leticia',
-                         'depa'     => 'Cliente',  
+                         'depa'     => 'Cliente',
                          'fecha'    => '04/11/1996',
                          'correo'   => 'usuario2@example.com'   ]);
                 return view('auxiliar.auxiliar_inicio');
@@ -98,4 +98,28 @@ Route::get('/auxiliar_buscarticket', function() {
 });
 Route::get('/auxiliar_reportes', function() {
     return view('auxiliar.auxiliar_reportes');
+});
+/* Rutas jefe */
+Route::get('/Jefe_inicio', function(){
+    return view('jefe.jefe_inicio');
+});
+
+Route::get('/nuevo_cliente', function(){
+    return view('jefe.jefe_nuevo_cliente');
+});
+
+Route::get('/nuevo_soporte', function(){
+    return view('jefe.jefe_nuevo_soporte');
+});
+
+Route::get('/buscar_usuario', function(){
+    return view('jefe.jefe_buscar_usuario');
+});
+
+Route::get('/control_tikets', function(){
+    return view('jefe.jefe_control_ticket');
+});
+
+Route::get('/consultar_tiket', function(){
+    return view('jefe.jefe_consultar_ticket');
 });
